@@ -3,9 +3,9 @@
     "vue": "^2.7.7"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~4.5.19",
-    "@vue/cli-service": "~5.0.8",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^4.5.19",
+    "@vue/cli-service": "^3.12.1",
     "babel-eslint": "^10.1.0",
     "core-js": "^3.23.5",
     "eslint": "^6.8.0",
@@ -42,5 +42,23 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
-  }
+  },
+  "description": "Create and use your own icons, or use only your favorites in your vue.js project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrejsharapov/vue-svg-icons.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "svg",
+    "icons",
+    "template",
+    "svg-icon"
+  ],
+  "author": "@andrejsharapov",
+  "bugs": {
+    "url": "https://github.com/andrejsharapov/vue-svg-icons/issues"
+  },
+  "homepage": "https://github.com/andrejsharapov/vue-svg-icons#readme"
 }
