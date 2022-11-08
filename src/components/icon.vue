@@ -28,9 +28,9 @@
         : size
     "
     :fill="color"
-    class="mdi-icon"
-    :style="transform"
+    class="v-icon"
     :class="{ 'v-icon--disabled': disabled }"
+    :style="transform"
   >
     <title v-if="title">{{ title }}</title>
     <path :d="icon"></path>
@@ -87,12 +87,6 @@
         default: false,
       },
     },
-    lib: {},
-    add(icons) {
-      if (typeof icons === "object" && icons !== null) {
-        this.lib = icons;
-      }
-    },
     computed: {
       icon() {
         if (this.path) {
@@ -100,14 +94,6 @@
         }
 
         return this.toCamelCase(this.path);
-
-        // const icon = this.$options.lib[this.toCamelCase(this.name)];
-
-        // if (typeof icon === "undefined") {
-        //   console.error(`[${this.name}] Name of the icon is incorrect`);
-        //   return;
-        // }
-        // return icon;
       },
       transform() {
         return this.rotate ? `transform: rotate(${this.rotate}deg)` : null;
