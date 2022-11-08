@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { mdiCheck, mdiClose } from "../tests/list";
+import { mdiCheck, mdiClose } from "./list";
 
 export default {
   setup() {
