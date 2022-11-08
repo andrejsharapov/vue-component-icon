@@ -111,6 +111,52 @@ export const yourIcon = "path";
 </template>
 ```
 
+<details>
+<summary>Use with @mdi/js and Nuxt</summary>
+
+1. Create plugin `vue-component-icon.js`
+
+```js
+// ./plugins/vue-component-icon.js
+
+import Vue from 'vue'
+import vIcon from 'vue-component-icon'
+
+Vue.use(vIcon)
+```
+
+2. Add plugin in `nuxt.config`
+
+```js
+plugins: [
+  ...
+  { src: '~/plugins/vue-component-icon' },
+  ...
+],
+```
+
+3. Use in vue component
+
+```html
+<script>
+import { mdiBriefcaseEyeOutline } from '@mdi/js'
+
+export default {
+  data() {
+    return {
+      mdiBriefcaseEyeOutline,
+    }
+  }
+}
+</script>
+
+<template>
+  <v-icon :path="mdiBriefcaseEyeOutline" />
+</template>
+```
+
+</details>
+
 ## Props
 
 | Name     | Type                 | Require    | Default        | Description                                                                                                  |
