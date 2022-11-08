@@ -1,36 +1,10 @@
 <template>
   <svg
     viewBox="0 0 24 24"
-    :width="
-      xSmall
-        ? '12'
-        : small
-        ? '16'
-        : dense
-        ? '20'
-        : large
-        ? '36'
-        : xLarge
-        ? '40'
-        : size
-    "
-    :height="
-      xSmall
-        ? '12'
-        : small
-        ? '16'
-        : dense
-        ? '20'
-        : large
-        ? '36'
-        : xLarge
-        ? '40'
-        : size
-    "
     :fill="color"
     class="v-icon"
     :class="{ 'v-icon--disabled': disabled }"
-    :style="transform"
+    :style="styleIcon"
   >
     <title v-if="title">{{ title }}</title>
     <path :d="icon"></path>
@@ -88,15 +62,34 @@
       },
     },
     computed: {
+      newSize() { 
+        return this.xSmall
+        ? '12'
+        : this.small
+        ? '16'
+        : this.dense
+        ? '20'
+        : this.large
+        ? '36'
+        : this.xLarge
+        ? '40'
+        : this.size
+      },
+      styleIcon() {
+        const style =  {
+          width: this.newSize + 'px' ?? '24px',
+          height: this.newSize + 'px' ?? '24px', 
+          transform: this.rotate ? `rotate(${this.rotate}deg)` : null,
+        }
+
+        return style;
+      },
       icon() {
         if (this.path) {
           return this.path;
         }
 
         return this.toCamelCase(this.path);
-      },
-      transform() {
-        return this.rotate ? `transform: rotate(${this.rotate}deg)` : null;
       },
     },
     methods: {
