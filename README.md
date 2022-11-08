@@ -24,10 +24,10 @@ Vue.js v2
 // main
 import Vue from "vue";
 import App from "./App.vue";
-import icons from "vue-svg-icons";
+import vIcon from "vue-svg-icons";
 
 new Vue({
-  icons,
+  vIcon,
   render: (h) => h(App),
 }).$mount("#app");
 ```
@@ -38,10 +38,11 @@ Vue.js v3
 // main
 import { createApp } from "vue";
 import App from "./App.vue";
+import vIcon from "vue-svg-icons";
 
 const app = createApp(App);
 
-app.use(icons);
+app.use(vIcon);
 app.mount("#app");
 ```
 
