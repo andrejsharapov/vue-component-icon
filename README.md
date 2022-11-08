@@ -51,12 +51,34 @@ app.mount("#app");
 ```js
 // path/list-icons
 
-export const iCheck = "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z";
-export const iClose = "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z";
+export const mdiCheck = "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z";
+export const mdiClose = "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z";
 ...
 export const yourIcon = "path";
 ...
 ```
+
+<details>
+<summary>How to add icons from mdi, fontawesome and more?</summary>
+
+### for mdi
+
+1. go to [mdi website](https://materialdesignicons.com/);
+2. select and click to the icon;
+3. find the `Advanced Export` label and click on the `code` icon;
+4. elect `View SVG`;
+5. select and copy path from the `d="..."`;
+6. create a variable in the icon file;
+
+### for fontawesome
+
+1. go to [fontawesome](https://fontawesome.com/);
+2. select and click to the icon;
+3. find and click the `code` icon to copy the SVG;
+4. paste the code in any text editor and cut the content from `d="..."`;
+5. create a variable in the icon file;
+
+</details>
 
 #### Import the list locally in components or globally
 
@@ -64,12 +86,12 @@ export const yourIcon = "path";
 <!-- component.vue -->
 
 <script>
-  import { iCheck, iClose, yourIcon } from "./list-icons";
+  import { mdiCheck, mdiClose, yourIcon } from "./list-icons";
 
   export default {
     data: () => ({
-      iCheck,
-      iClose,
+      mdiCheck,
+      mdiClose,
       yourIcon,
     }),
   };
@@ -82,27 +104,27 @@ export const yourIcon = "path";
 <template>
   <div>
     <pre>{{ yourIcon }}</pre>
-    <v-icon x-large color="yellowgreen" :path="iCheck" />
-    <v-icon size="32" color="red" :path="iClose" />
+    <v-icon x-large color="yellowgreen" :path="mdiCheck" />
+    <v-icon size="32" color="red" :path="mdiClose" />
   </div>
 </template>
 ```
 
-## Options
+## Props
 
-| Option   | Type                 |    Default     |
-| -------- | -------------------- | :------------: |
-| path     | `String`             |      `''`      |
-| title    | `String`             |      `''`      |
-| color    | `String`             | `currentColor` |
-| x-small  | `Boolean`            |      ---       |
-| small    | `Boolean`            |      ---       |
-| dense    | `Boolean`            |      ---       |
-| size     | `Boolean`            |      `24`      |
-| large    | `Boolean`            |      ---       |
-| x-large  | `Boolean`            |      ---       |
-| disabled | `Boolean`            |      ---       |
-| rotate   | `String` or `Number` |      ---       |
+| Name     | Type                 | Require    | Default        | Description                                                                                                  |
+| -------- | -------------------- | :--------- | :------------- | ------------------------------------------------------------------------------------------------------------ |
+| color    | `string`             | optional   | `currentColor` | Applies specified color to the control. For example `yellow` or css color (`#fff` or `rgba(255, 0, 0, 0.5)`) |
+| dense    | `boolean`            | optional   | false          | Makes icon smaller (20px)                                                                                    |
+| disabled | `boolean`            | optional   | false          | Disable the input                                                                                            |
+| large    | `boolean`            | optional   | false          | Makes the component large (36px)                                                                             |
+| path     | `string`             | `required` | `''`           | Generic element to define a shape                                                                            |
+| rotate   | `number` or `string` | optional   | `0`            | from `0` to `360`                                                                                            |
+| size     | `number` or `string` | optional   | `24`           | Specifies a custom font size for the icon                                                                    |
+| small    | `boolean`            | optional   | false          | Makes the component small (16px)                                                                             |
+| title    | `string`             | optional   | `''`           | Adds a header to the svg                                                                                     |
+| x-large  | `boolean`            | optional   | false          | Makes the component extra large (40px)                                                                       |
+| x-small  | `boolean`            | optional   | false          | Makes the component extra small (12px)                                                                       |
 
 [watchers]: https://github.com/andrejsharapov/vue-svg-icons/watchers/
 [forks]: https://github.com/andrejsharapov/vue-svg-icons/network/
