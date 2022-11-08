@@ -1,0 +1,36 @@
+name: Lint
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+jobs:
+  lint:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+        node-version: [14.x]
+    steps:
+      # step 1
+      - name: Checkout branch
+        uses: actions/checkout@master
+
+      # step 2
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # step 3
+      - name: Install deps
+        run: yarn install
+
+      # step 4
+      - name: Lint code
+        run: |
+          yarn prettier
+          yarn lint
