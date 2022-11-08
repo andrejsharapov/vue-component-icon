@@ -1,0 +1,10 @@
+bracketSpacing: true
+bracketLine: false
+endOfLine: auto
+jsxBracketSameLine: true
+printWidth: 80
+semi: true
+singleAttributePerLine: true
+singleQuote: true
+tabWidth: 2
+trailingComma: 'es5'
