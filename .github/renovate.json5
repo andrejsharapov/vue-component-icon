@@ -1,0 +1,38 @@
+{
+  "automerge": false,
+  "baseBranches": [
+    "main",
+    "develop"
+  ],
+  "extends": [
+    "config:base",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "ignoreDeps": [
+    // Unwanted dependency update
+  ],
+  "ignorePaths": [
+    "**/tests/**"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "major": {
+    "stabilityDays": 14
+  },
+  "minor": {
+    "stabilityDays": 7
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "automerge": false
+    }
+  ]
+}
