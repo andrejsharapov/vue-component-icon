@@ -39,7 +39,7 @@
     "last 2 versions",
     "not dead"
   ],
-  "name": "vue-svg-icons",
+  "name": "vue-component-icon",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -47,7 +47,7 @@
   "description": "Create and use your own icons, or use only your favorites in your vue.js project.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrejsharapov/vue-svg-icons.git"
+    "url": "git+https://github.com/andrejsharapov/vue-component-icon.git"
   },
   "keywords": [
     "vue",
@@ -59,7 +59,7 @@
   ],
   "author": "@andrejsharapov",
   "bugs": {
-    "url": "https://github.com/andrejsharapov/vue-svg-icons/issues"
+    "url": "https://github.com/andrejsharapov/vue-component-icon/issues"
   },
-  "homepage": "https://github.com/andrejsharapov/vue-svg-icons#readme"
+  "homepage": "https://github.com/andrejsharapov/vue-component-icon#readme"
 }

@@ -1,17 +1,18 @@
-# Vue Svg Icons
+# Vue Component Icon
 
 Create and use your own icons, or use only your favorites in your vue.js project.
 
-[![GitHub watchers](https://img.shields.io/github/watchers/andrejsharapov/vue-svg-icons?style=social)][watchers]
-[![GitHub forks](https://img.shields.io/github/forks/andrejsharapov/vue-svg-icons?style=social&)][forks]
-[![GitHub stars](https://img.shields.io/github/stars/andrejsharapov/vue-svg-icons?style=social)][stars]
+[![NPM Version](https://img.shields.io/npm/v/vue-component-icon)][npm]
+[![GitHub watchers](https://img.shields.io/github/watchers/andrejsharapov/vue-component-icon)][watchers]
+[![GitHub forks](https://img.shields.io/github/forks/andrejsharapov/vue-component-icon&)][forks]
+[![GitHub stars](https://img.shields.io/github/stars/andrejsharapov/vue-component-icon)][stars]
 
 ## Install
 
 ```bash
-npm i --save-dev vue-svg-icons
+npm i --save-dev vue-component-icon
 # or
-yarn add --dev vue-svg-icons
+yarn add --dev vue-component-icon
 ```
 
 ## How to use?
@@ -24,7 +25,7 @@ Vue.js v2
 // main
 import Vue from "vue";
 import App from "./App.vue";
-import vIcon from "vue-svg-icons";
+import vIcon from "vue-component-icon";
 
 new Vue({
   vIcon,
@@ -38,7 +39,7 @@ Vue.js v3
 // main
 import { createApp } from "vue";
 import App from "./App.vue";
-import vIcon from "vue-svg-icons";
+import vIcon from "vue-component-icon";
 
 const app = createApp(App);
 
@@ -70,7 +71,7 @@ export const yourIcon = "path";
 5. select and copy path from the `d="..."`;
 6. create a variable in the icon file;
 
-### for fontawesome
+### for Font Awesome
 
 1. go to [fontawesome](https://fontawesome.com/);
 2. select and click to the icon;
@@ -126,6 +127,11 @@ export const yourIcon = "path";
 | x-large  | `boolean`            | optional   | false          | Makes the component extra large (40px)                                                                       |
 | x-small  | `boolean`            | optional   | false          | Makes the component extra small (12px)                                                                       |
 
-[watchers]: https://github.com/andrejsharapov/vue-svg-icons/watchers/
-[forks]: https://github.com/andrejsharapov/vue-svg-icons/network/
-[stars]: https://github.com/andrejsharapov/vue-svg-icons/stargazers/
+## License
+
+Vue Component Icon is licensed under the MIT license. You are free to use, modify and distribute this software, as long as the copyright header is left intact.
+
+[npm]: https://www.npmjs.com/package/vue-component-icon/
+[watchers]: https://github.com/andrejsharapov/vue-component-icon/watchers/
+[forks]: https://github.com/andrejsharapov/vue-component-icon/network/
+[stars]: https://github.com/andrejsharapov/vue-component-icon/stargazers/
