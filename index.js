@@ -1,4 +1,4 @@
-import icon from './components/icon.vue'
+import icon from './src/components/icon.vue'
 
 export const vIcon = icon
 
