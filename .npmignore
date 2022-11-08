@@ -1,4 +1,7 @@
+.github/
 node_modules/
 dist/
-!src/components
+!src/components/
 tests/
+.prettierrc
+babel.config.js
