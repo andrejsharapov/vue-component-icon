@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from "./app.vue"
-import vIcon from './index'
+import vIcon from '../index'
 
 Vue.use(vIcon)
 
