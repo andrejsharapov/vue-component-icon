@@ -4,7 +4,7 @@ Create and use your own icons, or use only your favorites in your vue.js project
 
 [![NPM Version](https://img.shields.io/npm/v/vue-component-icon)][npm]
 [![GitHub watchers](https://img.shields.io/github/watchers/andrejsharapov/vue-component-icon)][watchers]
-[![GitHub forks](https://img.shields.io/github/forks/andrejsharapov/vue-component-icon&)][forks]
+[![GitHub forks](https://img.shields.io/github/forks/andrejsharapov/vue-component-icon)][forks]
 [![GitHub stars](https://img.shields.io/github/stars/andrejsharapov/vue-component-icon)][stars]
 
 ## Install
