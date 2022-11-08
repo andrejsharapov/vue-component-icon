@@ -2,6 +2,10 @@
 
 Create and use your own icons, or use only your favorites in your vue.js project.
 
+[![GitHub watchers](https://img.shields.io/github/watchers/andrejsharapov/vue-svg-icons?style=social)][watchers]
+[![GitHub forks](https://img.shields.io/github/forks/andrejsharapov/vue-svg-icons?style=social&)][forks]
+[![GitHub stars](https://img.shields.io/github/stars/andrejsharapov/vue-svg-icons?style=social)][stars]
+
 ## Install
 
 ```bash
@@ -44,7 +48,7 @@ app.mount("#app");
 #### Create a list of icons in your directory
 
 ```js
-// path/list-icons.js
+// path/list-icons
 
 export const iCheck = "M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z";
 export const iClose = "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z";
@@ -59,7 +63,7 @@ export const yourIcon = "path";
 <!-- component.vue -->
 
 <script>
-  import { iCheck, iClose, yourIcon } from "./list";
+  import { iCheck, iClose, yourIcon } from "./list-icons";
 
   export default {
     data: () => ({
@@ -98,3 +102,7 @@ export const yourIcon = "path";
 | x-large  | `Boolean`            |      ---       |
 | disabled | `Boolean`            |      ---       |
 | rotate   | `String` or `Number` |      ---       |
+
+[watchers]: https://github.com/andrejsharapov/vue-svg-icons/watchers/
+[forks]: https://github.com/andrejsharapov/vue-svg-icons/network/
+[stars]: https://github.com/andrejsharapov/vue-svg-icons/stargazers/
