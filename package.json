@@ -40,7 +40,7 @@
     "not dead"
   ],
   "name": "vue-component-icon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "license": "MIT",
   "private": false,
