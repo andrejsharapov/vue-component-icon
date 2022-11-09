@@ -1,6 +1,6 @@
 import icon from './src/components/icon.vue';
 
-export const vIcon = icon;
+export const cIcon = icon;
 
 export default {
   install(app) {

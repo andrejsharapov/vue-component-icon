@@ -2,8 +2,8 @@
   <svg
     viewBox="0 0 24 24"
     :fill="color"
-    class="v-icon"
-    :class="{ 'v-icon--disabled': disabled }"
+    class="c-icon"
+    :class="{ 'c-icon--disabled': disabled }"
     :style="styleIcon"
   >
     <title v-if="title">{{ title }}</title>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'v-icon',
+  name: 'c-icon',
   props: {
     color: {
       type: String,
@@ -105,7 +105,7 @@ export default {
 </script>
 
 <style>
-.v-icon--disabled {
+.c-icon--disabled {
   pointer-events: none;
   opacity: 0.38;
   fill: currentColor;

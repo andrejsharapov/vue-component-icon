@@ -1,17 +1,17 @@
 <template>
   <div>
-    <v-icon
+    <c-icon
       :path="mdiCheck"
       dense
       rotate="22"
       color="green"
     />
-    <v-icon
+    <c-icon
       :path="mdiClose"
       large
       color="red"
     />
-    <v-icon
+    <c-icon
       :path="mdiMagnify"
       rotate="32"
       color="blue"
