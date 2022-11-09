@@ -3,7 +3,7 @@
     viewBox="0 0 24 24"
     :fill="color"
     class="c-icon"
-    :class="{ 'c-icon--disabled': disabled }"
+    :class="{ 'c-icon--disabled': disabled, 'c-icon--dark': dark }"
     :style="styleIcon"
   >
     <title v-if="title">{{ title }}</title>
@@ -18,6 +18,10 @@ export default {
     color: {
       type: String,
       default: 'currentColor',
+    },
+    dark: {
+      type: Boolean,
+      default: false,
     },
     dense: {
       type: Boolean,
@@ -109,5 +113,9 @@ export default {
   pointer-events: none;
   opacity: 0.38;
   fill: currentColor;
+}
+
+.c-icon--dark {
+  fill: #fff;
 }
 </style>
