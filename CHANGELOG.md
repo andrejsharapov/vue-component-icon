@@ -1,5 +1,9 @@
 # Changelog
 
+## Release v1.0.2 (November 10, 2022)
+
+Component renamed to CIcon (Component Icon).
+
 ## Release v1.0.1 (November 09, 2022)
 
 The release with minor changes in the documentation is ready to go.

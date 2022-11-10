@@ -25,10 +25,10 @@ Vue.js v2
 // main
 import Vue from "vue";
 import App from "./App.vue";
-import vIcon from "vue-component-icon";
+import cIcon from "vue-component-icon";
 
 new Vue({
-  vIcon,
+  cIcon,
   render: (h) => h(App),
 }).$mount("#app");
 ```
@@ -39,11 +39,11 @@ Vue.js v3
 // main
 import { createApp } from "vue";
 import App from "./App.vue";
-import vIcon from "vue-component-icon";
+import cIcon from "vue-component-icon";
 
 const app = createApp(App);
 
-app.use(vIcon);
+app.use(cIcon);
 app.mount("#app");
 ```
 
@@ -120,9 +120,9 @@ export const yourIcon = "path";
 // ./plugins/vue-component-icon.js
 
 import Vue from 'vue'
-import vIcon from 'vue-component-icon'
+import cIcon from 'vue-component-icon'
 
-Vue.use(vIcon)
+Vue.use(cIcon)
 ```
 
 2. Add plugin in `nuxt.config`
