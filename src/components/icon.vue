@@ -3,7 +3,10 @@
     viewBox="0 0 24 24"
     :fill="color"
     class="c-icon"
-    :class="{ 'c-icon--disabled': disabled, 'c-icon--dark': dark }"
+    :class="{
+      'c-icon--disabled': disabled,
+      'c-icon--dark': dark && color === 'currentColor',
+    }"
     :style="styleIcon"
   >
     <title v-if="title">{{ title }}</title>
