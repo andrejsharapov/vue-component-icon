@@ -162,6 +162,7 @@ export default {
 | Name     | Type                 | Require    | Default        | Description                                                                                                  |
 | -------- | -------------------- | :--------- | :------------- | ------------------------------------------------------------------------------------------------------------ |
 | color    | `string`             | optional   | `currentColor` | Applies specified color to the control. For example `yellow` or css color (`#fff` or `rgba(255, 0, 0, 0.5)`) |
+| dark     | `boolean`            | optional   | false          | Changed component color to white if color option is not set.                                                                        |
 | dense    | `boolean`            | optional   | false          | Makes icon smaller (20px)                                                                                    |
 | disabled | `boolean`            | optional   | false          | Disable the input                                                                                            |
 | large    | `boolean`            | optional   | false          | Makes the component large (36px)                                                                             |

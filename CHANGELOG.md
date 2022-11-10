@@ -1,5 +1,9 @@
 # Changelog
 
+## Release v1.0.3 (November 11, 2022)
+
+Added `dark` option to component.
+
 ## Release v1.0.2 (November 10, 2022)
 
 Component renamed to CIcon (Component Icon).
