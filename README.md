@@ -2,7 +2,7 @@
 
 Create and use your own icons, or use only your favorites in your vue.js project.
 
-[![NPM Version](https://img.shields.io/npm/v/vue-component-icon)][npm]
+[![NPM Version](https://img.shields.io/npm/v/vue-component-icon?color=c53635)][npm]
 [![GitHub watchers](https://img.shields.io/github/watchers/andrejsharapov/vue-component-icon)][watchers]
 [![GitHub forks](https://img.shields.io/github/forks/andrejsharapov/vue-component-icon)][forks]
 [![GitHub stars](https://img.shields.io/github/stars/andrejsharapov/vue-component-icon)][stars]
@@ -104,9 +104,8 @@ export const yourIcon = "path";
 ```html
 <template>
   <div>
-    <pre>{{ yourIcon }}</pre>
-    <v-icon x-large color="yellowgreen" :path="mdiCheck" />
-    <v-icon size="32" color="red" :path="mdiClose" />
+    <c-icon x-large color="yellowgreen" :path="yourIcon" />
+    <c-icon size="32" color="red" :path="mdiClose" />
   </div>
 </template>
 ```
@@ -125,9 +124,11 @@ import cIcon from 'vue-component-icon'
 Vue.use(cIcon)
 ```
 
-2. Add plugin in `nuxt.config`
+2. Add plugin
 
 ```js
+// nuxt.config.js
+
 plugins: [
   ...
   { src: '~/plugins/vue-component-icon' },
@@ -151,7 +152,7 @@ export default {
 </script>
 
 <template>
-  <v-icon :path="mdiBriefcaseEyeOutline" />
+  <c-icon :path="mdiBriefcaseEyeOutline" />
 </template>
 ```
 
@@ -162,7 +163,7 @@ export default {
 | Name     | Type                 | Require    | Default        | Description                                                                                                  |
 | -------- | -------------------- | :--------- | :------------- | ------------------------------------------------------------------------------------------------------------ |
 | color    | `string`             | optional   | `currentColor` | Applies specified color to the control. For example `yellow` or css color (`#fff` or `rgba(255, 0, 0, 0.5)`) |
-| dark     | `boolean`            | optional   | false          | Changed component color to white if color option is not set.                                                                        |
+| dark     | `boolean`            | optional   | false          | Changed component color to white if color option is not set.                                                 |
 | dense    | `boolean`            | optional   | false          | Makes icon smaller (20px)                                                                                    |
 | disabled | `boolean`            | optional   | false          | Disable the input                                                                                            |
 | large    | `boolean`            | optional   | false          | Makes the component large (36px)                                                                             |
