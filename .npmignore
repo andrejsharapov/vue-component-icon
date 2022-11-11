@@ -1,6 +1,7 @@
 .github/
 node_modules/
 dist/
+src/
 !/src/components/
 tests/
 .markdownlint.yml
