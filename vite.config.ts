@@ -14,6 +14,7 @@ process.env.VITE_APP_DESCRIPTION = pkg.description;
 if (!isDevMode) {
   process.env.VITE_APP_TITLE = pkg.name;
 }
+
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
 
