@@ -109,7 +109,7 @@ export default {
           'c-icon--left': this.left,
           'c-icon--right': this.right,
         },
-      }
+      };
     },
     iconPath(): string | undefined {
       if (this.path) {
@@ -119,7 +119,7 @@ export default {
       return camelCase(this.path);
     },
   },
-}
+};
 </script>
 
 <template lang="pug">
