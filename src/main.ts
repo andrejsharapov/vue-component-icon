@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import App from './app.vue';
-import vIcon from '../index';
+// import CIcon from '../index';
+import CIcon from './index';
+import './assets/app.css';
 
-Vue.use(vIcon);
-
-Vue.config.productionTip = false;
+Vue.use(CIcon);
 
 new Vue({
   render: (h) => h(App),
