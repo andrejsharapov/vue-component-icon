@@ -1,28 +1,3 @@
-<template>
-  <div class="icons-wrapper">
-    <c-icon
-      :path="mdiCheck"
-      large
-      dark
-      color="green"
-    />
-    <c-icon
-      :path="mdiMagnify"
-      dense
-      dark
-    />
-    <c-icon
-      :path="mdiClose"
-      rotate="45"
-      color="blue"
-    />
-    <c-icon
-      :path="mdiLock"
-      disabled
-    />
-  </div>
-</template>
-
 <script>
 import { mdiCheck, mdiClose } from './list';
 import { mdiMagnify, mdiLock } from '@mdi/js';
@@ -39,12 +14,10 @@ export default {
 };
 </script>
 
-<style>
-.icons-wrapper {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
-  place-items: center;
-  grid-gap: 5vw;
-}
-</style>
+<template lang="pug">
+#app
+  c-icon(:path="mdiCheck" large dark color="green")
+  c-icon(:path="mdiMagnify" small size="64" dark)
+  c-icon(:path="mdiClose" rotate="45" color="blue")
+  c-icon(:path="mdiLock" xLarge disabled)
+</template>

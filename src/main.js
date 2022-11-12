@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import App from './app.vue';
-import vIcon from '../index';
+import CIcon from '../index';
 
-Vue.use(vIcon);
+import './assets/app.css';
+
+Vue.use(CIcon);
 
 Vue.config.productionTip = false;
 

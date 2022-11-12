@@ -1,9 +1,9 @@
-import icon from './src/components/icon.vue';
+import CIcon from './src/components/CIcon.vue';
 
-export const cIcon = icon;
+export { CIcon };
 
 export default {
   install(app) {
-    app.component(icon.name, icon);
+    app.component(CIcon.name, CIcon);
   },
 };
