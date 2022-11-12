@@ -62,6 +62,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    left: {
+      type: Boolean,
+      default: false,
+    },
+    right: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     getSize(): string | undefined {
@@ -80,22 +88,30 @@ export default {
       );
     },
     getStyle(): any | undefined {
-      const style = {
+      return {
         width: this.getSize ?? '24px',
         height: this.getSize ?? '24px',
         transform: this.rotate ? `rotate(${this.rotate}deg)` : null,
       };
-
-      return style;
     },
-    getClass(): any | undefined {
-      const classIcon = {
-        'c-icon--disabled': this.disabled,
-        'c-icon--dark': this.dark && this.color === 'currentColor',
-      };
-      return classIcon;
+    iconData(): any | undefined {
+      return {
+        xmlns: 'http://www.w3.org/2000/svg',
+        viewBox: '0 0 24 24',
+        role: 'img',
+        'aria-hidden': true,
+        style: this.getStyle,
+        class: {
+          'c-icon': this.path,
+          'c-icon--disabled': this.disabled,
+          'c-icon--color': this.color,
+          'c-icon--dark': this.dark && this.color === 'currentColor',
+          'c-icon--left': this.left,
+          'c-icon--right': this.right,
+        },
+      }
     },
-    icon(): string | undefined {
+    iconPath(): string | undefined {
       if (this.path) {
         return this.path;
       }
@@ -103,31 +119,22 @@ export default {
       return camelCase(this.path);
     },
   },
-};
+}
 </script>
 
-<template>
-  <svg
-    class="c-icon"
-    viewBox="0 0 24 24"
-    :fill="color"
-    :class="getClass"
-    :style="getStyle"
-  >
-    <title v-if="title">{{ title }}</title>
-    <path :d="icon"></path>
-  </svg>
+<template lang="pug">
+svg(v-bind="iconData" :fill="color")
+  title(v-if="title")
+    | {{ title }}
+  path(:d="iconPath")
 </template>
 
 <style>
 .c-icon {
-  --ci-light: 0deg 0% 100%;
-  --ci-dark: 0deg 0% 0%;
+  --ci-base: 0deg 0% 0%;
   --ci-opacity: 1;
   --ci-gutters: 0.5rem;
-  --ci-color: hsl(var(--ci-dark) / var(--ci-opacity));
 
-  fill: var(--ci-color);
   opacity: var(--ci-opacity);
 }
 
@@ -135,12 +142,23 @@ export default {
   --ci-opacity: 0.38;
 
   pointer-events: none;
-  fill: currentColor;
+}
+
+.c-icon--dark {
+  --ci-base: 0deg 0% 100%;
 }
 
 @media (prefers-color-scheme: dark) {
-  .c-icon--dark {
-    --ci-color: hsl(var(--ci-light) / var(--ci-opacity));
+  .c-icon:not(.c-icon--color) {
+    --ci-base: 0deg 0% 100%;
   }
+}
+
+.c-icon--left {
+  margin-right: var(--ci-gutters, '0.5rem');
+}
+
+.c-icon--right {
+  margin-left: var(--ci-gutters, '0.5rem');
 }
 </style>
