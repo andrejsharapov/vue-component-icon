@@ -10,7 +10,6 @@ const pkg = require('./package.json');
 
 process.env.VITE_APP_VERSION = pkg.version;
 process.env.VITE_APP_DESCRIPTION = pkg.description;
-process.env.VITE_APP_TITLE = pkg.name;
 
 if (!isDevMode) {
   process.env.VITE_APP_TITLE = pkg.name;
