@@ -1,0 +1,46 @@
+:root {
+  --ci-light: 0deg 0% 100%;
+  --ci-dark: 0deg 0% 0%;
+  --ci-opacity: 1;
+}
+
+:root {
+  --color-text: hsl(var(--ci-dark) / var(--ci-opacity));
+  --color-background: hsl(var(--ci-light) / var(--ci-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: hsl(var(--ci-light) / var(--ci-opacity));
+    --color-background: hsl(var(--ci-dark) / var(--ci-opacity));
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  font: normal 1rem sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+#app {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  place-items: center;
+  grid-gap: 5vw;
+}
