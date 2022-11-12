@@ -167,7 +167,9 @@ export default {
 | dense    | `boolean`            | optional   | false          | Makes icon smaller (20px)                                                                                    |
 | disabled | `boolean`            | optional   | false          | Disable the input                                                                                            |
 | large    | `boolean`            | optional   | false          | Makes the component large (36px)                                                                             |
+| left     | `boolean`            | optional   | false          | Applies `margin-right` to the icon when placed to the `left` of another element or text                      |
 | path     | `string`             | `required` | `''`           | Generic element to define a shape                                                                            |
+| right    | `boolean`            | optional   | false          | Applies `margin-left` to the icon when placed to the `right` of another element or text                      |
 | rotate   | `number` or `string` | optional   | `0`            | from `0` to `360`                                                                                            |
 | size     | `number` or `string` | optional   | `24`           | Specifies a custom font size for the icon                                                                    |
 | small    | `boolean`            | optional   | false          | Makes the component small (16px)                                                                             |
