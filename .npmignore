@@ -1,7 +1,7 @@
 # Tests and development
 __tests__/
-node_modules/
 dist/
+node_modules/
 src/*
 !src/components
 !src/util
