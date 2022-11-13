@@ -15,6 +15,8 @@ npm i --save-dev vue-component-icon
 yarn add --dev vue-component-icon
 ```
 
+[![Demo vue-component-icon](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vue-component-icon-666vv3?fontsize=14&hidenavigation=1&theme=dark)
+
 ## How to use?
 
 ### Import and connection
