@@ -13,6 +13,7 @@ Added some changes in documentation.
 ## Release v1.1.1 (November 13, 2022)
 
 Fixes `dark` mode conditions.
+Change template lang from `pug` to `html`.
 
 ## Release v1.1.0 (November 13, 2022)
 
