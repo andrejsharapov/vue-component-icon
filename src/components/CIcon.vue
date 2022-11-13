@@ -83,6 +83,7 @@ export default {
         role: 'img',
         'aria-hidden': true,
         fill: this.applyColors,
+        'data-icon': this.title,
         style: this.getStyle(),
         class: {
           'c-icon': this.path,
@@ -141,11 +142,11 @@ export default {
 };
 </script>
 
-<template lang="pug">
-svg(v-bind="iconData")
-  title(v-if="title")
-    | {{ title }}
-  path(:d="iconPath")
+<template>
+  <svg v-bind="iconData">
+    <title v-if="title">{{ title }}</title>
+    <path :d="iconPath"></path>
+  </svg>
 </template>
 
 <style>
