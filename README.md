@@ -1,6 +1,6 @@
 # Vue Component Icon
 
-Create and use your own icons, or use only your favorites in your vue.js project.
+Small package that will help you not to use huge icon libraries that add weight to your app, but to create your own sets of icons based on svg-path and use them with a ready-made component.
 
 [![NPM Version](https://img.shields.io/npm/v/vue-component-icon?color=c53635)][npm]
 [![GitHub watchers](https://img.shields.io/github/watchers/andrejsharapov/vue-component-icon)][watchers]
@@ -80,6 +80,8 @@ export const yourIcon = "path";
 3. find and click the `code` icon to copy the SVG;
 4. paste the code in any text editor and cut the content from `d="..."`;
 5. create a variable in the icon file;
+
+[About viewBox](https://github.com/andrejsharapov/vue-component-icon/discussions/23)
 
 </details>
 
