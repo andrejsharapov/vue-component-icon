@@ -1,9 +1,22 @@
-.github/
+# Tests and development
+__tests__/
+/dist
 node_modules/
-dist/
-src/
-!/src/components/
-tests/
+src/*
+!src/components
+.env*
+
+# Github workspace
+.github/
+
+# Editor directories and files
+.idea
+.vscode/
+
+# Other files
+.eslint*
+.gitattributes
 .markdownlint.yml
 .prettierrc
-babel.config.js
+*.html
+*?config?*

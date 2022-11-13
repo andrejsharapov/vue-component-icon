@@ -1,8 +1,15 @@
 {
+  "name": "vue-component-icon",
+  "version": "1.1.0",
+  "description": "Create and use your own icons, or use only your favorites in your vue.js project.",
+  "private": false,
+  "author": "@andrejsharapov",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "prettier": "prettier --write ./**/*.{js,vue} --ignore-path .eslintignore",
-    "lint": "vue-cli-service lint"
+    "prettier": "prettier --write ./**/*.{js,vue} --ignore-path .gitignore",
+    "prettier:check": "yarn prettier --list-different",
+    "prettier:format": "yarn prettier --write --loglevel warn",
+    "lint": "vue-cli-service lint --fix --ignore-path .gitignore"
   },
   "devDependencies": {
     "@mdi/js": "^7.0.96",
@@ -16,6 +23,8 @@
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.7.1",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "vue": "^2.7.7",
     "vue-template-compiler": "^2.7.7"
   },
@@ -39,16 +48,15 @@
     "last 2 versions",
     "not dead"
   ],
-  "name": "vue-component-icon",
-  "version": "1.0.3",
   "main": "index.js",
-  "license": "MIT",
-  "private": false,
-  "description": "Create and use your own icons, or use only your favorites in your vue.js project.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andrejsharapov/vue-component-icon.git"
   },
+  "bugs": {
+    "url": "https://github.com/andrejsharapov/vue-component-icon/issues"
+  },
+  "homepage": "https://github.com/andrejsharapov/vue-component-icon#readme",
   "keywords": [
     "vue",
     "vue3",
@@ -57,9 +65,5 @@
     "template",
     "svg-icon"
   ],
-  "author": "@andrejsharapov",
-  "bugs": {
-    "url": "https://github.com/andrejsharapov/vue-component-icon/issues"
-  },
-  "homepage": "https://github.com/andrejsharapov/vue-component-icon#readme"
+  "license": "MIT"
 }

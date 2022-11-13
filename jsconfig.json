@@ -1,0 +1,25 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "~/*": [
+        "./src/components/*"
+      ]
+    }
+  },
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "plugins": [
+      "@volar/vue-language-plugin-pug"
+    ]
+  },
+  "extensions": [
+    ".vue"
+  ]
+}
